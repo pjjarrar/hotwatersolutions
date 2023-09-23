@@ -1,0 +1,136 @@
+    <!-- ======= Constructions Section ======= -->
+    <section id="constructions" class="constructions">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our Commitment and Values</h2>
+          <p>Hot Water Solutions is committed to cultivating enduring partnerships with manufacturers, bridging the gap between top-quality plumbing products and wholesalers, 
+            while offering unwavering support at every stage of your project, guided by a vision of excellence and a dedication to your success.</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(assets/img/constructions-1.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Our Vision</h4>
+                    <p>Our founding vision was to create an expansive network of exceptionally skilled trade professionals, 
+                      facilitating their access to top-quality products through reputable wholesalers. 
+                      This vision continues to guide our mission today.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(assets/img/constructions-2.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Diverse Clientele</h4>
+                    <p>At Hot Water Solutions, everyone within the commercial, residential, and industrial supply chains, including manufacturers, wholesalers, contractors, and engineers, 
+                      is a valued customer benefiting from our unwavering dedication to meeting their unique needs.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(assets/img/constructions-3.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Comprehensive Support</h4>
+                    <p>We take pride in providing comprehensive support to contractors, ensuring successful installations through our field expertise. 
+                      Our commitment also includes assisting product managers and estimators with tailored solutions for each project</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(assets/img/constructions-4.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">A Partner Throughout</h4>
+                    <p>Hot Water Solutions is your partner from bid time to project completion. 
+                      We excel in specification development, a core strength that sets us apart. 
+                      Our specialized specification writing services are available throughout the state of Texas, adding significant value to our clients' endeavors.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+        </div>
+
+      </div>
+    </section><!-- End Constructions Section -->
+
+    <!-- ======= Alt Services Section ======= -->
+    <section id="alt-services" class="alt-services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-around gy-4">
+          <div class="col-lg-6 img-bg" style="background-image: url(assets/img/alt-services.jpg);" data-aos="zoom-in"
+            data-aos-delay="100"></div>
+
+          <div class="col-lg-5 d-flex flex-column justify-content-center">
+            <h3>Key Strengths</h3>
+            <p>At Hot Water Solutions, we take pride in our key strengths that set us apart in the plumbing industry.</p>
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
+              <i class="bi bi-easel flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Expert Product Knowledge</a></h4>
+                <p>With decades of experience, we possess an in-depth understanding of plumbing products, enabling us to guide you toward the right solutions for your projects.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-patch-check flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Effective Distribution</a></h4>
+                <p>We excel in efficient product distribution, ensuring timely access to quality plumbing products through our extensive network of wholesalers.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-brightness-high flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Specialized Support</a></h4>
+                <p>Our team provides specialized support to contractors, offering expert advice and field expertise to ensure the successful installation and operation of plumbing systems.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-brightness-high flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Innovative Solutions</a></h4>
+                <p>We're at the forefront of innovation, constantly exploring new ways to enhance product visibility and efficiency in the marketplace.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Alt Services Section -->
