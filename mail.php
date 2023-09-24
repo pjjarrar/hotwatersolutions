@@ -18,5 +18,4 @@
     }
 
     header('Location:thankyou.html');
-
 ?>
