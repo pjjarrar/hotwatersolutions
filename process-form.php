@@ -1,34 +1,34 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     // Get form data
     $name = strip_tags(trim($_POST["name"]));
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $subject = strip_tags(trim($_POST["subject"]));
     $message = strip_tags(trim($_POST["message"]));
 
-    // Check that data was sent
-    if (empty($name) OR empty($message) OR empty($email) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        http_response_code(400);
-        echo "Please complete the form and try again.";
-        exit;
-    }
+    require_once "vendor/autoload.php";
 
-    // Set recipient email
-    $recipient = "sam@hotwatersolutions.com";
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
 
-    // Set email headers
-    $headers = "From: $name <$email>";
+    $mail = new PHPMailer(true);
 
-    // Send email
-    if (mail($recipient, $subject, $message, $headers)) {
-        http_response_code(200);
-        echo "Thank You! Your message has been sent.";
-    } catch (Exception $e) {
-        http_response_code(500);
-        echo "Oops! Something went wrong, we couldn't send your message. Mailer Error: {$mail->ErrorInfo}";
-    }
-} else {
-    http_response_code(403);
-    echo "There was a problem with your submission, please try again.";
-}
+    $mail->isSMTP();
+    $mail->SMTPAuth = true;
+    
+    $mail->Host = 'smtp.sendgrid.net';
+    $mail->Username = 'apikey';
+    $mail->Password = 'N/A';
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
+
+    $mail->setFrom($email, $name);
+    $mail->addAddress('sam@hotwatersolutions.com', "Sam");
+    $mail->isHTML(true);
+    $mail->Subject = $subject;
+    $mail->Body = $message;
+
+    $mail->send();
+
+    echo "Message has been sent";
 ?> 
