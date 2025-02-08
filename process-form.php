@@ -1,14 +1,4 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
-
-// Load config
-$config = require_once 'config.php';
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data
     $name = strip_tags(trim($_POST["name"]));
@@ -23,30 +13,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    try {
-        $mail = new PHPMailer(true);
-        
-        // Server settings
-        $mail->isSMTP();
-        $mail->Host = $config['smtp_host'];
-        $mail->SMTPAuth = true;
-        $mail->Username = $config['smtp_username'];
-        $mail->Password = $config['smtp_password'];
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = $config['smtp_port'];
+    // Set recipient email
+    $recipient = "sam@hotwatersolutions.com";
 
-        // Recipients
-        $mail->setFrom($config['smtp_username'], $name); // Use authenticated email as From
-        $mail->addAddress($config['recipient_email']);
-        $mail->addReplyTo($email, $name);
+    // Set email headers
+    $headers = "From: $name <$email>";
 
-        // Content
-        $mail->isHTML(true);
-        $mail->Subject = $subject;
-        $mail->Body = "Name: $name<br>Email: $email<br><br>Message:<br>$message";
-        $mail->AltBody = "From: $name\nEmail: $email\n\nMessage:\n$message";
-
-        $mail->send();
+    // Send email
+    if (mail($recipient, $subject, $message, $headers)) {
         http_response_code(200);
         echo "Thank You! Your message has been sent.";
     } catch (Exception $e) {
