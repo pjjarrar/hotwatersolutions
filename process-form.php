@@ -1,16 +1,17 @@
 <?php
+
+require_once __DIR__ . "/vendor/autoload.php";
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 try {
     // Get form data
     $name = strip_tags(trim($_POST["name"]));
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $subject = strip_tags(trim($_POST["subject"]));
     $message = strip_tags(trim($_POST["message"]));
-
-    require_once "vendor/autoload.php";
-
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
-    use PHPMailer\PHPMailer\Exception;
 
     $mail = new PHPMailer(true);
 
@@ -60,4 +61,5 @@ try {
     http_response_code(500);
     echo "Message could not be sent. Please try again later.";
 }
-?> 
+
+?>
